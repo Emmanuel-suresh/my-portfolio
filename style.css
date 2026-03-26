@@ -1,0 +1,333 @@
+/* --- GENERAL & RESET --- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  /* Deep Blue Gradient Background */
+  background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  background-attachment: fixed;
+  color: white;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+p {
+  color: rgb(200, 200, 200); /* Adjusted for readability on dark background */
+}
+
+/* --- TRANSITIONS --- */
+a,
+.btn,
+.details-container,
+.color-container {
+  transition: all 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* --- DESKTOP NAV --- */
+nav,
+.nav-links {
+  display: flex;
+}
+
+nav {
+  justify-content: space-around;
+  align-items: center;
+  height: 17vh;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+}
+
+.nav-links {
+  gap: 2rem;
+  list-style: none;
+  font-size: 1.5rem;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #00d2ff;
+  text-decoration: underline;
+  text-underline-offset: 1rem;
+}
+
+.logo {
+  font-size: 2rem;
+}
+
+/* --- TRANSLUCENT GLASS CONTAINERS --- */
+.details-container,
+.contact-info-upper-container,
+.color-container {
+  padding: 1.5rem;
+  flex: 1;
+  /* Transparent background with blur */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+}
+
+/* --- THE POP-OUT HOVER EFFECT --- */
+.details-container:hover,
+.contact-info-upper-container:hover,
+.color-container:hover {
+  transform: translateY(-12px) scale(1.03); /* Moves up and grows slightly */
+  background: rgba(255, 255, 255, 0.04); /* Becomes more transparent */
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+}
+
+/* --- SECTIONS --- */
+section {
+  padding-top: 4vh;
+  height: 96vh;
+  margin: 0 10rem;
+  box-sizing: border-box;
+  min-height: fit-content;
+}
+
+.section-container {
+  display: flex;
+  gap: 4rem;
+  height: 80%;
+}
+
+/* --- PROFILE SECTION --- */
+#profile {
+  display: flex;
+  justify-content: center;
+  gap: 5rem;
+  height: 80vh;
+}
+
+.section__pic-container {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  margin: auto 0;
+}
+
+.section__pic-container img {
+  width: 100%;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.1);
+}
+
+.section__text {
+  align-self: center;
+  text-align: center;
+}
+
+.section__text p {
+  font-weight: 600;
+}
+
+.section__text__p2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+#socials-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 1rem;
+}
+
+/* --- ICONS --- */
+.icon {
+  cursor: pointer;
+  height: 2rem;
+  /* Inverts black icons to white for the dark background */
+  filter: brightness(0) invert(1);
+}
+
+/* --- BUTTONS --- */
+.btn-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn {
+  font-weight: 600;
+  padding: 1rem;
+  width: 9rem;
+  border-radius: 2rem;
+  cursor: pointer;
+}
+
+.btn-color-1 {
+  background: white;
+  color: #0f2027;
+  border: 1px solid white;
+}
+
+.btn-color-1:hover {
+  background: transparent;
+  color: white;
+}
+
+.btn-color-2 {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.btn-color-2:hover {
+  background: white;
+  color: #0f2027;
+}
+
+/* --- EXPERIENCE & PROJECTS --- */
+.experience-sub-title {
+  color: #00d2ff;
+  font-weight: 600;
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+}
+
+.article-container {
+  display: flex;
+  text-align: initial;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+  justify-content: space-around;
+}
+
+article {
+  display: flex;
+  width: 10rem;
+  gap: 0.5rem;
+}
+
+.project-img {
+  border-radius: 2rem;
+  width: 90%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* --- CONTACT & FOOTER --- */
+#contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  margin: 2rem auto;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+footer {
+  height: 20vh;
+  padding: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* --- HAMBURGER MENU --- */
+#hamburger-nav {
+  display: none;
+}
+
+.hamburger-icon span {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: rgba(15, 32, 39, 0.95);
+  backdrop-filter: blur(10px);
+  width: fit-content;
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.menu-links.open {
+  max-height: 300px;
+}
+
+
+.about-containers {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: center;
+  gap: 2rem;
+}
+
+
+.project-card-small {
+  max-width: 350px;
+  min-width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Ideas section specifically */
+.idea-card {
+  max-width: 250px;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.05); 
+  border-style: dashed; 
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.idea-card h3 {
+  color: #00d2ff;
+  margin-bottom: 0.5rem;
+}
+
+.project-img {
+  width: 100%;
+  height: 180px; 
+  object-fit: cover;
+  border-radius: 1.5rem;
+}
+
+
+section {
+  height: auto; 
+  padding-bottom: 10vh;
+}
+.about-pic{
+    width: 200px;
+    height: 200px;
+}
