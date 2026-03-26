@@ -104,7 +104,7 @@ section {
 
 .section-container {
   display: flex;
-  gap: 4rem;
+  gap: 2rem;
   height: 80%;
 }
 
